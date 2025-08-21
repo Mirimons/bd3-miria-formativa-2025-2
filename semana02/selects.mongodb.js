@@ -11,7 +11,11 @@ use(database);
 db['Livraria'].find();
 
 /* SELECIONA ARQUIVOS COM DADOS DE ACORDO COM A CATEGORIA DEFINIDA: */
-// db['Livraria'].find({"categoria":"Fantasia Heroica"});
+db['Livraria'].find({"categoria":"Fantasia Heroica"});
 
 /* SELECIONA ARQUIVOS COM DADOS DE ACORDO COM A CATEGORIA DEFINIDA E OCULTANDO CERTOS CAMPOS */
-// db['Livraria'].find({"categoria":"Fantasia Heroica"}, {"_id":0, "codigo":0, "descricao":0});
+db['Livraria'].find({"categoria":"Fantasia Heroica"}, {"_id":0, "codigo":0, "descricao":0});
+
+
+/* SELECIONA ARQUIVOS QUE CONTENHAM UMA INICIDENCIA ESPECIFICA DE TEXTO */
+db['Livraria'].find({"descricao":/robô/i});
